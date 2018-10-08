@@ -73,12 +73,14 @@ if [ -f /etc/prosody/prosody.cfg.lua ]; then
     /etc/prosody/updategroup.sh
 fi
 
-cd /etc/pki/prosody
-make issabel.cnf
-make issabel.key
-make issabel.crt
-chgrp prosody /etc/pki/prosody/issabel*
-chmod g+r /etc/pki/prosody/issabel*
+if [ ! -f /etc/pki/prosody/issabel.crt ]; then
+    cd /etc/pki/prosody
+    make issabel.cnf
+    make issabel.key
+    make issabel.crt
+    chgrp prosody /etc/pki/prosody/issabel*
+    chmod g+r /etc/pki/prosody/issabel*
+fi
 
 %preun
 
