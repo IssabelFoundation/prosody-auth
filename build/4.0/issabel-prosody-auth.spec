@@ -9,7 +9,7 @@ Source0: %{modname}_%{version}-%{release}.tgz
 Group: System/Administration
 Vendor: Issabel Foundation
 Packager: info@issabel.org
-#Archi:    x86_64
+BuildArch: noarch
 
 AutoReqProv: no
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
