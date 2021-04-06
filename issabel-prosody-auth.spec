@@ -40,24 +40,24 @@ mkdir -p %{buildroot}/etc/prosody/conf.d
 
 #Files installation
 [ -d "`dirname %{buildroot}/mod_auth_external.lua`" ] || %{__mkdir_p} "`dirname %{buildroot}/mod_auth_external.lua`"
-%{__install} -m 0644 "issabel-%{modname}_%{version}-%{release}/setup/usr/lib64/prosody/modules/mod_auth_external/mod_auth_external.lua" "%{buildroot}/usr/lib64/prosody/modules/mod_auth_external/mod_auth_external.lua"
+%{__install} -m 0644 "issabel-%{modname}-%{version}/setup/usr/lib64/prosody/modules/mod_auth_external/mod_auth_external.lua" "%{buildroot}/usr/lib64/prosody/modules/mod_auth_external/mod_auth_external.lua"
 [ -d "`dirname %{buildroot}/issabelprosody.pl`" ] || %{__mkdir_p} "`dirname %{buildroot}/issabelprosody.pl`"
-%{__install} -m 0755 "issabel-%{modname}_%{version}-%{release}/setup/usr/lib64/prosody/modules/mod_auth_external/issabelprosody.pl" "%{buildroot}/usr/lib64/prosody/modules/mod_auth_external/issabelprosody.pl"
+%{__install} -m 0755 "issabel-%{modname}-%{version}/setup/usr/lib64/prosody/modules/mod_auth_external/issabelprosody.pl" "%{buildroot}/usr/lib64/prosody/modules/mod_auth_external/issabelprosody.pl"
 
-%{__install} -m 0755 "issabel-%{modname}_%{version}-%{release}/setup/usr/share/issabel/privileged/prosodygroup" "%{buildroot}/usr/share/issabel/privileged/prosodygroup"
+%{__install} -m 0755 "issabel-%{modname}-%{version}/setup/usr/share/issabel/privileged/prosodygroup" "%{buildroot}/usr/share/issabel/privileged/prosodygroup"
 
 [ -d "`dirname %{buildroot}/auth.cfg.lua`" ] || %{__mkdir_p} "`dirname %{buildroot}/auth.cfg.lua`"
-%{__install} -m 0644 "issabel-%{modname}_%{version}-%{release}/setup/etc/prosody/conf.d/auth.cfg.lua" "%{buildroot}/etc/prosody/conf.d/auth.cfg.lua"
+%{__install} -m 0644 "issabel-%{modname}-%{version}/setup/etc/prosody/conf.d/auth.cfg.lua" "%{buildroot}/etc/prosody/conf.d/auth.cfg.lua"
 [ -d "`dirname %{buildroot}/groups.cfg.lua`" ] || %{__mkdir_p} "`dirname %{buildroot}/groups.cfg.lua`"
-%{__install} -m 0644 "issabel-%{modname}_%{version}-%{release}/setup/etc/prosody/conf.d/groups.cfg.lua" "%{buildroot}/etc/prosody/conf.d/groups.cfg.lua"
+%{__install} -m 0644 "issabel-%{modname}-%{version}/setup/etc/prosody/conf.d/groups.cfg.lua" "%{buildroot}/etc/prosody/conf.d/groups.cfg.lua"
 [ -d "`dirname %{buildroot}/issabel.cfg.lua`" ] || %{__mkdir_p} "`dirname %{buildroot}/issabel.cfg.lua`"
-%{__install} -m 0644 "issabel-%{modname}_%{version}-%{release}/setup/etc/prosody/conf.d/issabel.cfg.lua" "%{buildroot}/etc/prosody/conf.d/issabel.cfg.lua"
+%{__install} -m 0644 "issabel-%{modname}-%{version}/setup/etc/prosody/conf.d/issabel.cfg.lua" "%{buildroot}/etc/prosody/conf.d/issabel.cfg.lua"
 [ -d "`dirname %{buildroot}/sharedgroups.txt`" ] || %{__mkdir_p} "`dirname %{buildroot}/sharedgroups.txt`"
-%{__install} -m 0644 "issabel-%{modname}_%{version}-%{release}/setup/etc/prosody/sharedgroups.txt" "%{buildroot}/etc/prosody/sharedgroups.txt"
+%{__install} -m 0644 "issabel-%{modname}-%{version}/setup/etc/prosody/sharedgroups.txt" "%{buildroot}/etc/prosody/sharedgroups.txt"
 [ -d "`dirname %{buildroot}/updategroup.sh`" ] || %{__mkdir_p} "`dirname %{buildroot}/updategroup.sh`"
-%{__install} -m 0755 "issabel-%{modname}_%{version}-%{release}/setup/etc/prosody/updategroup.sh" "%{buildroot}/etc/prosody/updategroup.sh"
+%{__install} -m 0755 "issabel-%{modname}-%{version}/setup/etc/prosody/updategroup.sh" "%{buildroot}/etc/prosody/updategroup.sh"
 [ -d "`dirname %{buildroot}/runprosodycmd`" ] || %{__mkdir_p} "`dirname %{buildroot}/runprosodycmd`"
-%{__install} -m 0755 "issabel-%{modname}_%{version}-%{release}/setup/etc/prosody/runprosodycmd" "%{buildroot}/etc/prosody/runprosodycmd"
+%{__install} -m 0755 "issabel-%{modname}-%{version}/setup/etc/prosody/runprosodycmd" "%{buildroot}/etc/prosody/runprosodycmd"
 
 %pre
 # No group Creation
