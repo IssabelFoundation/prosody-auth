@@ -72,7 +72,7 @@ if [ -f /etc/prosody/prosody.cfg.lua ]; then
     sed -i 's/^authentication = /-- authentication = /g' /etc/prosody/prosody.cfg.lua
     sed -i 's/--"groups"/"groups"/g' /etc/prosody/prosody.cfg.lua
     sed -i 's/--"admin_telnet"/"admin_telnet"/g' /etc/prosody/prosody.cfg.lua
-    sed -i 's/--"websocket"/"websocket"/' prosody.cfg.lua
+    sed -i 's/--"websocket"/"websocket"/' /etc/prosody/prosody.cfg.lua
     /etc/prosody/updategroup.sh
 fi
 
