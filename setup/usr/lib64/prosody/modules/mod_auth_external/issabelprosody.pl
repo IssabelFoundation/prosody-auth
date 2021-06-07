@@ -28,12 +28,13 @@ while ( chomp ( $_ = <STDIN>) and length $_){
     $md5pass0 = md5_hex($password);
     $md5pass1 = md5_hex($pass1251);
     $md5pass2 = md5_hex($passkoi8);
+    $md5pass3 = $password;
 
     my $result;
     my $dbh = DBI->connect("DBI:SQLite:$dbName", '', '') || die "Could not connect to database: $DBI::errstr";
     switch ($op) {
         case "auth" {
-            my $query="SELECT COUNT(*) FROM $dbTable WHERE $fieldUser='$user' AND ($fieldPass='$md5pass0' OR $fieldPass='$md5pass1' OR $fieldPass='$md5pass2');";
+            my $query="SELECT COUNT(*) FROM $dbTable WHERE $fieldUser='$user' AND ($fieldPass='$md5pass0' OR $fieldPass='$md5pass1' OR $fieldPass='$md5pass2' OR $fieldPass='$md5pass3');";
             #syslog LOG_INFO, sprintf("query: %s", $query);
             my $sth = $dbh->prepare($query);
             $sth->execute();
