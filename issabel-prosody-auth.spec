@@ -16,6 +16,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-root
 
 Requires: lua
 Requires: prosody
+Requires: nmap-ncat
 Requires: perl-Unix-Syslog
 Requires: perl-Switch
 Requires: perl-Text-Iconv
